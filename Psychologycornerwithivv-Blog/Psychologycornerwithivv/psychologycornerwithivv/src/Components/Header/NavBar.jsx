@@ -10,19 +10,19 @@ const NavBar = ({ menu, setMenu }) => {
   return (
     <header className="flex justify-between items-center mt-[10px] ">
       <Link to="/">
-        <h1 className="p-[10px] cursor-pointer text-white font-bold xsm:text-[25px] sm:text-3xl hover:scale-110 capitalize duration-200">
+        <h1 className="ml-[10px] p-[10px] cursor-pointer text-white font-bold xsm:text-[25px] sm:text-3xl hover:scale-110 capitalize duration-300">
           Psychologycornerwithivv
         </h1>
       </Link>
       <div className="hidden md:flex">
         <Link
-          className="px-4 cursor-pointer text-white font-medium text-2xl hover:scale-110 capitalize duration-200"
+          className="px-4 cursor-pointer text-white font-medium text-2xl hover:scale-110 capitalize duration-200 mr-[10px]"
           to="blogs"
         >
           Blog
         </Link>
         <Link
-          className="px-4 cursor-pointer text-white font-medium text-2xl hover:scale-110 capitalize duration-200"
+          className="px-4 cursor-pointer text-white font-medium text-2xl hover:scale-110 capitalize duration-200 mr-[10px]"
           to="feedbacks"
         >
           Feedbacks
@@ -31,7 +31,7 @@ const NavBar = ({ menu, setMenu }) => {
         {user && (
           <>
             <Link
-              className="px-4 cursor-pointer text-white font-medium text-2xl hover:scale-110 capitalize duration-200"
+              className="px-4 cursor-pointer text-white font-medium text-2xl hover:scale-110 capitalize duration-200 mr-[10px]"
               to="/addBlog"
             >
               Add Blog
