@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import { setUser } from "./Store/slices/authSlice";
 import Feedbacks from "./Pages/Feedbacks/Feedbacks";
 import FeedbackForm from "./Pages/Feedbacks/FeedbackForm";
+import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -43,7 +44,8 @@ function App() {
               path="/blogs/:blogId"
               element={<BlogDetails menu={menu} />}
             />
-            <Route path="login" element={<Login />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </BrowserRouter>

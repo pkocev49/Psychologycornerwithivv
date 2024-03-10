@@ -61,10 +61,10 @@ const BlogDetails = ({ menu }) => {
               <div>
                 {!menu && (
                   <Fade top>
-                    <h2 className="mb-[20px] text-white font-bold text-[25px] 2xl:text-[30px]">
+                    <h2 className="mb-[20px] text-[#7B3F00] font-bold text-[25px] 2xl:text-[30px] border-b-[2px] border-[#7B3F00]">
                       {foundBlog.title}
                     </h2>
-                    <h3 className=" text-white font-medium xl:text-[20px] whitespace-normal  ">
+                    <h3 className=" text-[#80461B] font-medium xl:text-[20px] whitespace-normal  ">
                       {foundBlog.description.split("\n").map((line, index) => (
                         <React.Fragment key={index + 1}>
                           {line}
@@ -80,13 +80,13 @@ const BlogDetails = ({ menu }) => {
                 <>
                   <button
                     onClick={handleDelete}
-                    className=" mt-[20px] mb-[30px] mr-[20px] border-[1.5px] border-white  p-[5px] rounded-[10px] text-white xl:w-[80px]"
+                    className=" mt-[20px] mb-[30px] mr-[20px] border-[1.5px] border-[#7B3F00]  p-[5px] rounded-[10px] text-[#7B3F00] xl:w-[80px]"
                   >
                     Delete
                   </button>
                   <button
                     onClick={handleEdit}
-                    className=" mt-[20px] mb-[30px] border-[1.5px] border-white  p-[5px] rounded-[10px] text-white xl:w-[80px]"
+                    className=" mt-[20px] mb-[30px] border-[1.5px] border-[#7B3F00]  p-[5px] rounded-[10px] text-[#7B3F00] xl:w-[80px]"
                   >
                     Update
                   </button>
@@ -96,13 +96,13 @@ const BlogDetails = ({ menu }) => {
           ) : (
             <form className="p-[20px] flex justify-center flex-col items-center mt-[100px] 4xl:ml-[600px] 8xl:ml-[800px] 16xl:ml-[1100px]">
               <input
-                className="w-full md:w-[700px]  bg-transparent placeholder-white text-[15px] border-[2px] border-white p-[10px] rounded-[10px] mb-[20px] "
+                className="w-full md:w-[700px]  bg-transparent placeholder-white text-[15px] border-[2px] border-[#7B3F00] p-[10px] rounded-[10px] mb-[20px] "
                 type="text"
                 value={blog.title}
                 onChange={(e) => setBlog({ ...blog, title: e.target.value })}
               />
               <textarea
-                className="w-full h-[100px] sm:h-[200px]  md:w-[700px] resize-none bg-transparent placeholder-white text-[15px] border-[2px] border-white p-[10px] rounded-[10px] mb-[20px]"
+                className="w-full h-[100px] sm:h-[200px]  md:w-[700px] resize-none bg-transparent placeholder-white text-[15px] border-[2px] border-[#7B3F00] p-[10px] rounded-[10px] mb-[20px]"
                 value={blog.description}
                 onChange={(e) =>
                   setBlog({ ...blog, description: e.target.value })
@@ -110,7 +110,7 @@ const BlogDetails = ({ menu }) => {
               />
               <button
                 onClick={handleSave}
-                className="w-[340px] text-white text-[20px] border-[2px] border-white p-[10px] rounded-md mt-[20px]"
+                className="w-[340px] text-white text-[20px] border-[2px] border-[#7B3F00] p-[10px] rounded-md mt-[20px] hover:text-white hover:scale-110 transition duration-300"
               >
                 Save
               </button>
